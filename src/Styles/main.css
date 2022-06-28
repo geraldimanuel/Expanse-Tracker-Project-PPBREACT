@@ -1,0 +1,30 @@
+.active{
+    color:white;
+
+}
+
+.active-icon {
+    color: #b57295!important;
+}
+
+.sidebar-items {
+    color: gray;
+    font-size:large;
+
+}
+
+.sidebar-items p {
+    margin-left: 1em;
+}
+
+.sidebar-items:hover p {
+    color: white;
+}
+
+.sidebar-items:hover svg {
+    color: #b57295;
+}
+
+.sidebar-items:not(:last-child){
+    margin-bottom: 1.5em;
+}
