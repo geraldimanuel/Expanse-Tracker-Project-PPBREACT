@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
 	Flex,
 	Heading,
@@ -10,10 +11,49 @@ import {
 	InputGroup,
 	InputLeftElement,
 } from "@chakra-ui/react";
-
 import { FiCreditCard, FiSearch, FiBell } from "react-icons/fi";
+import { UserContext } from "../context/UserContext";
 
 export default function Balance() {
+	const { saldo, setSaldo } = useContext(UserContext);
+	const { updateSaldo, setUpdateSaldo } = useContext(UserContext);
+	const { plusmin, setPlusmin } = useContext(UserContext);
+	const { history, setHistory } = useContext(UserContext);
+	const addHistory = useContext(UserContext);
+
+	function plusHandler() {
+		setPlusmin("+");
+	}
+
+	function minHandler() {
+		setPlusmin("-");
+	}
+
+	function handleChange(e) {
+		const temp = e.target.value;
+
+		setUpdateSaldo(temp);
+		console.log(updateSaldo);
+	}
+
+	function handleSubmit() {
+		if (plusmin === "+") {
+			setSaldo((prevValue) => prevValue + parseInt(updateSaldo));
+		} else if (plusmin === "-") {
+			setSaldo((prevValue) => prevValue - parseInt(updateSaldo));
+		}
+	}
+
+	function errorHandling(e) {
+		e.preventDefault();
+
+		if (!parseInt(updateSaldo)) {
+		} else {
+			handleSubmit();
+			addHistory(saldo);
+		}
+	}
+
 	return (
 		<Flex
 			w={["100%", "100%", "30%"]}
@@ -80,7 +120,7 @@ export default function Balance() {
 						<Flex flexDir="column">
 							<Text color="gray.400">Current Balance</Text>
 							<Text fontWeight="bold" fontSize="xl">
-								Rp150.000
+								Rp{saldo}
 							</Text>
 						</Flex>
 						<Flex align="center">
@@ -111,11 +151,11 @@ export default function Balance() {
 			<Flex flexDir="column" my={4}>
 				<Flex justify="space-between" mb={2}>
 					<Text>Card Holder</Text>
-					<Text fontWeight="bold">Monica Angelia</Text>
+					<Text fontWeight="bold">Kesya Febriana</Text>
 				</Flex>
 				<Flex justify="space-between" mb={2}>
 					<Text>Balance</Text>
-					<Text fontWeight="bold">Rp.1,500,000</Text>
+					<Text fontWeight="bold">Rp.{saldo}</Text>
 				</Flex>
 			</Flex>
 			<Heading letterSpacing="tight" size="md" my={4}>
@@ -130,6 +170,7 @@ export default function Balance() {
 					color="#519D6B"
 					borderRadius="15px"
 					width="170px"
+					onClick={plusHandler}
 				>
 					In
 				</Button>
@@ -138,32 +179,30 @@ export default function Balance() {
 					color="#C25050"
 					borderRadius="15px"
 					width="170px"
+					onClick={minHandler}
 				>
 					Out
 				</Button>
 			</Flex>
-			{/* <InputLeftElement
-						pointerEvents="none"
-						children={<FiCreditCard color="gray.700" />}
-					/>
-					<Input type="number" placeholder="xxxx xxxx xxxx xxxx" /> */}
-
 			<Text color="gray" mt={4} mb={2}>
-				Amount
+				Amount ({plusmin})
 			</Text>
-			<InputGroup>
-				<InputLeftElement pointerEvents="none" children={"Rp."} />
-				<Input type="number" placeholder="130.00" />
-			</InputGroup>
-			<Button
-				mt={4}
-				bgColor="blackAlpha.900"
-				color="#fff"
-				p={7}
-				borderRadius={15}
-			>
-				Checkout
-			</Button>
+			<Flex as="form" flexDirection="column" onSubmit={errorHandling}>
+				<InputGroup>
+					<InputLeftElement pointerEvents="none" children={"Rp"} />
+					<Input type="number" placeholder="130.00" onChange={handleChange} />
+				</InputGroup>
+				<Button
+					mt={4}
+					bgColor="blackAlpha.900"
+					color="#fff"
+					p={7}
+					borderRadius={15}
+					type="submit"
+				>
+					Accept
+				</Button>
+			</Flex>
 		</Flex>
 	);
 }

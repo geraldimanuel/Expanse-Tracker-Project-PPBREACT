@@ -1,5 +1,4 @@
 import React from "react";
-import { GlobalProvider } from "../context/GlobalState";
 import { Flex } from "@chakra-ui/react";
 
 import NavBar from "../components/NavBar";

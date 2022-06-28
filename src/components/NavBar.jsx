@@ -1,6 +1,6 @@
 import { Flex, Heading, Avatar, Text, Icon, Link } from "@chakra-ui/react";
-
 import { FiHome, FiPieChart, FiDollarSign, FiBox } from "react-icons/fi";
+import kesya from "../assets/kesya.png";
 
 export default function NavBar() {
 	return (
@@ -63,8 +63,8 @@ export default function NavBar() {
 					</Flex>
 				</Flex>
 				<Flex flexDir="column" alignItems="center" mb={10} mt={5}>
-					<Avatar my={2} src="avatar1.jpg" />
-					<Text>Gerald Imanuel</Text>
+					<Avatar my={2} src={kesya} />
+					<Text>Kesya Febriana</Text>
 				</Flex>
 			</Flex>
 		</Flex>

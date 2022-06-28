@@ -8,7 +8,7 @@ import {
 	AlertTitle,
 	AlertDescription,
 } from "@chakra-ui/react";
-import { GlobalContext } from "../context/GlobalState";
+import { GlobalContext } from "./context/GlobalState";
 
 export const Transaction = ({ transaction }) => {
 	const { deleteTransaction } = useContext(GlobalContext);
