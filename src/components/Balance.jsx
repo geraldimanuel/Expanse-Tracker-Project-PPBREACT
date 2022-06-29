@@ -160,7 +160,7 @@ export default function Balance() {
 				</Flex>
 				<Flex justify="space-between" mb={2}>
 					<Text>Balance</Text>
-					<Text fontWeight="bold">Rp.{saldo}</Text>
+					<Text fontWeight="bold">Rp{saldo}</Text>
 				</Flex>
 			</Flex>
 			<Heading letterSpacing="tight" size="md" my={4}>
