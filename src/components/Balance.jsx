@@ -18,8 +18,7 @@ export default function Balance() {
 	const { saldo, setSaldo } = useContext(UserContext);
 	const { updateSaldo, setUpdateSaldo } = useContext(UserContext);
 	const { plusmin, setPlusmin } = useContext(UserContext);
-	const { history, setHistory } = useContext(UserContext);
-	const addHistory = useContext(UserContext);
+	const { data, setData } = useContext(UserContext);
 
 	function plusHandler() {
 		setPlusmin("+");
@@ -38,8 +37,16 @@ export default function Balance() {
 
 	function handleSubmit() {
 		if (plusmin === "+") {
-			setSaldo((prevValue) => prevValue + parseInt(updateSaldo));
+			setData({
+				Expanse: [...data.Expanse],
+				Income: [...data.Income, parseInt(updateSaldo)],
+			});
+			setSaldo((prevValue) => prevValue + parseInt(Math.abs(updateSaldo)));
 		} else if (plusmin === "-") {
+			setData({
+				Expanse: [...data.Expanse, parseInt(updateSaldo)],
+				Income: [...data.Income],
+			});
 			setSaldo((prevValue) => prevValue - parseInt(updateSaldo));
 		}
 	}
@@ -50,7 +57,6 @@ export default function Balance() {
 		if (!parseInt(updateSaldo)) {
 		} else {
 			handleSubmit();
-			addHistory(saldo);
 		}
 	}
 

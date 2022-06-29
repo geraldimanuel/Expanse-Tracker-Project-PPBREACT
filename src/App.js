@@ -8,11 +8,10 @@ function App() {
 	const [saldo, setSaldo] = useState(0);
 	const [updateSaldo, setUpdateSaldo] = useState(0);
 	const [plusmin, setPlusmin] = useState("+");
-
-	// const addHistory = (saldo) => {
-	// 	let copy = [...history];
-	// 	copy = [...copy, { id: history.length + 1, task: saldo }];
-	// };
+	const [data, setData] = useState({
+		Expanse: [],
+		Income: [],
+	});
 
 	return (
 		<UserContext.Provider
@@ -23,7 +22,8 @@ function App() {
 				setUpdateSaldo,
 				plusmin,
 				setPlusmin,
-				// addHistory,
+				data,
+				setData,
 			}}
 		>
 			<GlobalProvider>
