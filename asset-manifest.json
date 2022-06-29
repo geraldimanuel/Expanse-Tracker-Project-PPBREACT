@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Expanse-Tracker-Project-PPBREACT/static/css/main.b3343961.css",
+    "main.js": "/Expanse-Tracker-Project-PPBREACT/static/js/main.b43cb9dc.js",
+    "static/media/kesya.png": "/Expanse-Tracker-Project-PPBREACT/static/media/kesya.bcbca260a6b826bdda52.png",
+    "index.html": "/Expanse-Tracker-Project-PPBREACT/index.html",
+    "main.b3343961.css.map": "/Expanse-Tracker-Project-PPBREACT/static/css/main.b3343961.css.map",
+    "main.b43cb9dc.js.map": "/Expanse-Tracker-Project-PPBREACT/static/js/main.b43cb9dc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3343961.css",
+    "static/js/main.b43cb9dc.js"
+  ]
+}
