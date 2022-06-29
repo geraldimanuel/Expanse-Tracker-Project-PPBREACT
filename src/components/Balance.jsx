@@ -32,7 +32,6 @@ export default function Balance() {
 		const temp = e.target.value;
 
 		setUpdateSaldo(temp);
-		console.log(updateSaldo);
 	}
 
 	function handleSubmit() {
