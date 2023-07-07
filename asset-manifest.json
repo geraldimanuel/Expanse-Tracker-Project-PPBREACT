@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Expanse-Tracker-Project-PPBREACT/static/css/main.b3343961.css",
-    "main.js": "/Expanse-Tracker-Project-PPBREACT/static/js/main.ce310365.js",
+    "main.js": "/Expanse-Tracker-Project-PPBREACT/static/js/main.f56d4e84.js",
     "static/media/Patrick.jpg": "/Expanse-Tracker-Project-PPBREACT/static/media/Patrick.b614111616b66e07b841.jpg",
     "index.html": "/Expanse-Tracker-Project-PPBREACT/index.html",
     "main.b3343961.css.map": "/Expanse-Tracker-Project-PPBREACT/static/css/main.b3343961.css.map",
-    "main.ce310365.js.map": "/Expanse-Tracker-Project-PPBREACT/static/js/main.ce310365.js.map"
+    "main.f56d4e84.js.map": "/Expanse-Tracker-Project-PPBREACT/static/js/main.f56d4e84.js.map"
   },
   "entrypoints": [
     "static/css/main.b3343961.css",
-    "static/js/main.ce310365.js"
+    "static/js/main.f56d4e84.js"
   ]
 }
