@@ -53,8 +53,7 @@ export default function Balance() {
 	function errorHandling(e) {
 		e.preventDefault();
 
-		if (!parseInt(updateSaldo)) {
-		} else {
+		if (parseInt(updateSaldo)) {
 			handleSubmit();
 		}
 	}
@@ -156,7 +155,7 @@ export default function Balance() {
 			<Flex flexDir="column" my={4}>
 				<Flex justify="space-between" mb={2}>
 					<Text>Card Holder</Text>
-					<Text fontWeight="bold">Kesya Febriana</Text>
+					<Text fontWeight="bold">Gerald Imanuel</Text>
 				</Flex>
 				<Flex justify="space-between" mb={2}>
 					<Text>Balance</Text>

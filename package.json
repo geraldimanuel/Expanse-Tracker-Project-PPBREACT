@@ -1,5 +1,5 @@
 {
-  "homepage": "http://geraldimanuelstudent.github.io/Expanse-Tracker-Project-PPBREACT",
+  "homepage": "https://gbnk.geraldimanuel.my.id",
   "name": "week-0",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
     "framer-motion": "^6.3.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

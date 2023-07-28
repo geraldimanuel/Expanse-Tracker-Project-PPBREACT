@@ -30,7 +30,7 @@ export default function Content() {
 			<Heading fontWeight="normal" mb={4} letterSpacing="tight">
 				Welcome back,{" "}
 				<Flex fontWeight="bold" display="inline-flex">
-					Kesya Febriana
+					Gerald Imanuel
 				</Flex>
 			</Heading>
 			<Text color="gray" fontSize="sm">
